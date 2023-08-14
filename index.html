@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="box-content">
+        <div class="item">
+            <div class="box-custom-border ">
+                <div class="content-absolute-test"></div>
+                <div class="content">
+                    <div class="content-cover"></div>
+                    <div class="count-item">0</div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="box-custom-border">
+                <div class="content-absolute-test"></div>
+                <div class="content">
+                    <div class="content-cover"></div>
+                    <div class="count-item">0</div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="box-custom-border">
+                <div class="content-absolute-test"></div>
+                <div class="content">
+                    <div class="content-cover"></div>
+                    <div class="count-item">0</div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="box-custom-border">
+                <div class="content-absolute-test"></div>
+                <div class="content">
+                    <div class="content-cover"></div>
+                    <div class="count-item">0</div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="box-custom-border">
+                <div class="content-absolute-test"></div>
+                <div class="content">
+                    <div class="content-cover"></div>
+                    <div class="count-item">0</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    
+    <script>
+        const allItems = document.querySelectorAll('.item')
+
+        allItems.forEach( item => {
+            item.addEventListener('click', () => {
+                console.log(item)
+                allItems.forEach( itemInternal => {
+                    console.log(itemInternal)
+                    itemInternal.querySelector('.box-custom-border').classList.remove('selected')
+                })
+
+                item.querySelector('.box-custom-border').classList.add('selected')
+            })
+        });
+    </script>
+</body>
+</html>
